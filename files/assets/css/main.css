@@ -1,0 +1,35 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+/* START DASHBAORD */
+
+.hero_section {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.hero_section img {
+    max-width: 100%;
+}
+
+.hero_section .info {
+    margin-top: 60px;
+}
+
+.hero_section .info h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.hero_section .info p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* END DASHBAORD */
