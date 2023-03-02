@@ -3,7 +3,7 @@
                         <div class="pcoded-navigatio-lavel">Navigation</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="active pcoded-trigger">
-                                <a href="index.php">
+                                <a href="main.php?dir=dashboard&page=dashboard">
                                     <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                                     <span>Dashboard</span>
                                 </a>
@@ -15,12 +15,12 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class=" ">
-                                        <a href="categories">
+                                        <a href="main.php?dir=categories&page=report">
                                             <span class="pcoded-mtext">Categories</span>
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="category_items" target="">
+                                        <a href="main.php?dir=items&page=report" target="">
                                             <span class="pcoded-mtext"> Category Items </span>
                                         </a>
                                     </li>

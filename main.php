@@ -41,6 +41,18 @@ include 'init.php';
                                     } elseif ($dir == 'categories' && $page == 'report') {
                                         include "categories/report.php";
                                     }
+
+                                    // START Items
+                                    if ($dir == 'items' && $page == 'add') {
+                                        include "items/add.php";
+                                    } elseif ($dir == 'items' && $page == 'edit') {
+                                        include "items/edit.php";
+                                    } elseif ($dir == 'items' && $page == 'delete') {
+                                        include 'items/delete.php';
+                                    } elseif ($dir == 'items' && $page == 'report') {
+                                        include "items/report.php";
+                                    }
+
                                     ?>
                                 </div>
 

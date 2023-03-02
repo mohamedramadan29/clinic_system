@@ -54,7 +54,7 @@
                 <form method="post" action="main.php?dir=categories&page=edit">
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type='text' name="cat_id" value="<?php echo $cat['id']; ?>">
+                        <input type='hidden' name="cat_id" value="<?php echo $cat['id']; ?>">
                         <label for="Company-2" class="block">Name</label>
                         <input id="Company-2" required name="name" type="text" class="form-control required" value="<?php echo  $cat['cat_name'] ?>">
                     </div>
