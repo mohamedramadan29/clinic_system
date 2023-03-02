@@ -19,13 +19,16 @@
                         <tr>
                             <th> # </th>
                             <th>Name</th>
+                            <th>category_name</th>
                             <th>description</th>
                             <th>Action </th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $stmt = $connect->prepare("SELECT * FROM items");
+                        $stmt = $connect->prepare("SELECT * FROM items
+                        INNER JOIN category ON items.cat_id = category.id
+                        ");
                         $stmt->execute();
                         $allcat = $stmt->fetchAll();
                         $i = 0;
@@ -35,6 +38,7 @@
                             <tr>
                                 <td> <?php echo $i; ?> </td>
                                 <td> <?php echo  $cat['item_name']; ?> </td>
+                                <td> <?php echo  $cat['cat_name']; ?> </td>
                                 <td> <?php echo  $cat['item_desc']; ?> </td>
                                 <td>
                                     <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal"> Edit </button>
@@ -80,13 +84,13 @@
     </div>
 
 
-    
+
     <!-- ADD NEW Item MODAL   -->
     <div class="modal fade" id="add-Modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title"> Add Category </h4>
+                    <h4 class="modal-title"> Add item </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -96,6 +100,22 @@
                         <div class="form-group">
                             <label for="Company-2" class="block">Name</label>
                             <input required id="Company-2" name="name" type="text" class="form-control required">
+                        </div>
+                        <div class="form-group">
+                            <label for="Company-2" class="block">Category</label>
+                            <select name="cat_id" id="" class="select2 col-sm-12 form-control">
+                                <option value=""> -- Select category -- </option>
+                                <?php
+                                $stmt = $connect->prepare("SELECT * FROM category");
+                                $stmt->execute();
+                                $allcat = $stmt->fetchAll();
+                                foreach($allcat as $cat){
+                                    ?>
+                                    <option value="<?php echo $cat['id'] ?>"><?php echo $cat['cat_name']; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="Company-2" class="block">Description</label>

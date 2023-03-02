@@ -29,6 +29,8 @@
     <script type="text/javascript" src="files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
     <script type="text/javascript" src="files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
     <script type="text/javascript" src="files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
+  <!-- Select 2 js -->
+<script type="text/javascript" src="files\bower_components\select2\js\select2.full.min.js"></script>
     <!-- Custom js -->
     <script src="files\assets\pages\data-table\js\data-table-custom.js"></script>
     <script src="files\assets\js\pcoded.min.js"></script>
