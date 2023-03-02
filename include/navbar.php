@@ -25,6 +25,11 @@
                                         </a>
                                     </li>
                                     <li class=" ">
+                                        <a href="main.php?dir=menus&page=report" target="">
+                                            <span class="pcoded-mtext"> Menus  </span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
                                         <a href="request_order" target="">
                                             <span class="pcoded-mtext"> Request Section </span>
                                         </a>

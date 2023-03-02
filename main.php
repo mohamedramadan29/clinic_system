@@ -53,6 +53,17 @@ include 'init.php';
                                         include "items/report.php";
                                     }
 
+                                    // START Menus
+                                    if ($dir == 'menus' && $page == 'add') {
+                                        include "menus/add.php";
+                                    } elseif ($dir == 'menus' && $page == 'edit') {
+                                        include "menus/edit.php";
+                                    } elseif ($dir == 'menus' && $page == 'delete') {
+                                        include 'menus/delete.php';
+                                    } elseif ($dir == 'menus' && $page == 'report') {
+                                        include "menus/report.php";
+                                    }
+
                                     ?>
                                 </div>
 
