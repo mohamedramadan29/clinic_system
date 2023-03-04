@@ -30,7 +30,9 @@
                     </thead>
                     <tbody>
                         <?php
-                        $stmt = $connect->prepare("SELECT * FROM options");
+                        $stmt = $connect->prepare("SELECT * FROM options
+                        INNER JOIN category ON options.cat = category.id
+                        ");
                         $stmt->execute();
                         $alloption = $stmt->fetchAll();
                         $i = 0;
@@ -44,7 +46,7 @@
                                 <td> <?php echo  $option['meal_type']; ?> </td>
                                 <td> <?php echo  $option['day']; ?> </td>
                                 <td> <?php echo  $option['option_type']; ?> </td>
-                                <td> <?php echo  $option['cat']; ?> </td>
+                                <td> <?php echo  $option['cat_name']; ?> </td>
                                 <td> <?php echo  $option['special_desc']; ?> </td>
                                 <td>
                                     <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $option['id']; ?>"> Edit </button>

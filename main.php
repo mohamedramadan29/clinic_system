@@ -53,7 +53,7 @@ include 'init.php';
                                         include "items/report.php";
                                     }
 
-                                    // START Menus
+                                    // START Menus Options
                                     if ($dir == 'menus' && $page == 'add') {
                                         include "menus/add.php";
                                     } elseif ($dir == 'menus' && $page == 'edit') {
@@ -63,6 +63,17 @@ include 'init.php';
                                     } elseif ($dir == 'menus' && $page == 'report') {
                                         include "menus/report.php";
                                     }
+                                    // START Main Menu 
+                                    if ($dir == 'main_menu' && $page == 'add') {
+                                        include "main_menu/add.php";
+                                    } elseif ($dir == 'main_menu' && $page == 'edit') {
+                                        include "main_menu/edit.php";
+                                    } elseif ($dir == 'main_menu' && $page == 'delete') {
+                                        include 'main_menu/delete.php';
+                                    } elseif ($dir == 'main_menu' && $page == 'report') {
+                                        include "main_menu/report.php";
+                                    }
+
 
                                     ?>
                                 </div>
